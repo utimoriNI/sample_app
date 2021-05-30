@@ -61,4 +61,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   # Cloud9への接続を許可する
   config.hosts.clear
+  config.action_mailer.raise_delivery_errors = false
+  host = '26ee457ef9684e7b820df6ac30e3872f.vfs.cloud9.us-east-2.amazonaws.com'
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
 end
